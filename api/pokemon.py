@@ -16,7 +16,7 @@ class handler(BaseHTTPRequestHandler):
       data = r.json()
       pokemon_list = []
       for pokemon_data in data:
-        pokemon = pokemon_data['names'][0]['flavor_text_entries'][0]
+        pokemon = pokemon_data['flavor_text_entries'][0]['flavor_text']
         pokemon_list.append(pokemon)
       message = str(pokemon_list)
     else:
